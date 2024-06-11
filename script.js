@@ -35,7 +35,7 @@ async function validation() {
 
 async function fetchWeatherData(location) {
     const apiKey = process.env.apiKey;
-    // const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
 
     try {
         let data = await fetch(url);
@@ -49,7 +49,7 @@ async function fetchWeatherData(location) {
 async function sendSMS(phoneNumber, report) {
     const accountSid = process.env.accountSid;
     const authToken = process.env.authToken;
-    // let url = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`
+    let url = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`
     try {
         let data = await fetch(url, {
             method: "POST",
