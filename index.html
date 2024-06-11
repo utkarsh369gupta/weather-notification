@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Notification</title>
+</head>
+
+<body>
+    <form method="post" name="Myform" onsubmit="return validation()">
+        <div class="container">
+            <div class="form">
+                <div class="name">
+                    <b>Enter your name:</b> <input type="text" name="name" id="name" placeholder="enter name">
+                    <b><span class="formerror" id="name-error"></span></b>
+                </div><br>
+                <div class="phone no">
+                    <b>Enter your Phone No:</b> <input type="text" name="phone" id="phone" placeholder="enter Phone no." required>
+                    <b><span class="formerror" id="phone-error"></span></b>
+                </div><br>
+                <div class="location">
+                    <b>Enter your Location:</b> <input type="text" name="location" id="location" placeholder="enter location" >
+                    <b><span class="formerror" id="location-error"></span></b>
+                </div><br><br>
+                <div class="butt">
+                    <input type="submit" name="submit" id="submit" value="Send Notification">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
